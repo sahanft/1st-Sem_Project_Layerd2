@@ -73,7 +73,6 @@ public class AddCustomerController implements Initializable {
 
     }
 
-
     public void CustomerUpdateOnAction(ActionEvent event) throws IOException {
         String custId = txtCustId.getText();
         String custAddress = txtCustAddress.getText();
@@ -81,7 +80,7 @@ public class AddCustomerController implements Initializable {
         String custMobile = txtCustMobile.getText();
         String custPayment = txtCustPayment.getText();
 
-        CusromerDTO dto = new CusromerDTO(custId,custAddress,custName,custMobile,custPayment);
+        CusromerDTO dto = new CusromerDTO(custId,custName,custAddress,custMobile,custPayment);
         try {
             if (!validateCustomer()){
                 return;
@@ -93,7 +92,7 @@ public class AddCustomerController implements Initializable {
                 loadAllCustomer();
                 clearField();
             }
-            CustomerAddTable.getItems().add(new CustomerTm(custId,custAddress,custName,custMobile,custPayment));
+            CustomerAddTable.getItems().add(new CustomerTm(custId,custName,custAddress,custMobile,custPayment));
             loadAllCustomer();
 
         } catch (SQLException e) {
