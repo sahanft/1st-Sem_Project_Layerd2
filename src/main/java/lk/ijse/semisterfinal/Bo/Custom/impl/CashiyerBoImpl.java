@@ -55,3 +55,5 @@ public class CashiyerBoImpl implements CashiyerBo {
         return true;
     }
 }
+
+//so
